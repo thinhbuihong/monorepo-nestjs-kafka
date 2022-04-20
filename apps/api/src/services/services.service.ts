@@ -1,7 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Producer } from 'kafkajs';
-import { CreateServiceDto } from './dto/create-service.dto';
-import { UpdateServiceDto } from './dto/update-service.dto';
+import { CreateServiceDto, UpdateServiceDto } from 'n/common-dto';
 
 @Injectable()
 export class ServicesService {

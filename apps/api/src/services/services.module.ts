@@ -14,12 +14,12 @@ import { ClientKafka, ClientsModule, Transport } from '@nestjs/microservices';
             clientId: 'api.services',
             brokers: ['localhost:9092'],
           },
-          consumer: {
-            groupId: 'api.services',
-          },
+          // consumer: {
+          //   groupId: 'api.services',
+          // },
           producer: {
             allowAutoTopicCreation: true,
-            createPartitioner: () => (args) => 3,
+            // createPartitioner: () => (args) => 3,
           },
         },
       },
