@@ -12,11 +12,8 @@ import { ClientKafka, ClientsModule, Transport } from '@nestjs/microservices';
         options: {
           client: {
             clientId: 'api.services',
-            brokers: ['localhost:9092'],
+            brokers: process.env.KAFKA_BROKERS.split(','),
           },
-          // consumer: {
-          //   groupId: 'api.services',
-          // },
           producer: {
             allowAutoTopicCreation: true,
             // createPartitioner: () => (args) => 3,
